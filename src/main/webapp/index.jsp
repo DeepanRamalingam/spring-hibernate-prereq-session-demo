@@ -7,8 +7,8 @@
 <title>Home</title>
 </head>
 <body>
- <a href="/spring-mvc-java-config/employees">Show Employee List</a>
-<form action="/spring-mvc-java-config/addNew" method="post" modelAttribute="emp">
+ <a href="/employee-app/employees">Show Employee List</a>
+<form action="/employee-app/addNew" method="post" modelAttribute="emp">
 <input type="text" name="empid" placeholder="Enter the ID"/> <br>
 <input type="text" name="empname" placeholder="Enter the Name" /> <br>
 <input type="text" name="gender" placeholder="Enter the Gender" /> <br>
@@ -19,7 +19,7 @@
 </form>
 <!-- form for adding account details -->
 
-<form action="/spring-mvc-java-config/addNewAccount" method="post" modelAttribute="account">
+<form action="/employee-app/addNewAccount" method="post" modelAttribute="account">
 <input type="text" name="id" placeholder="Enter the ID"/> <br>
 <input type="text" name="type" placeholder="Enter the Type" /> <br>
 <input type="submit" value="Add Account" />

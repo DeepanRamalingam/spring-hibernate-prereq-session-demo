@@ -3,6 +3,8 @@ package com.stackroute.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,8 +18,11 @@ import com.stackroute.model.Employee;
 import com.stackroute.service.AccountService;
 import com.stackroute.service.EmployeeService;
 
+
 @Controller
 public class EmployeeController {
+	
+	 private static final Logger logger = LoggerFactory.getLogger(EmployeeController.class);
 
 	@Autowired
 	EmployeeService empService;
@@ -27,6 +32,13 @@ public class EmployeeController {
 	
 	@GetMapping("/employees")
 	public String printAllEmployees(ModelMap map) {
+		
+		logger.info("employees is called");
+		logger.info("employees is called");
+		logger.info("employees is called");
+		logger.info("employees is called");
+		
+//		System.out.println("employees is displayed");
 		
 		List<Employee> employees = empService.findAll();
 		List<Account> accounts = accountService.findAll();
